@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug RandomSameSeed",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build RandomSameSeed",
+      "program": "${workspaceFolder}/RandomSameSeed/bin/Debug/net10.0/RandomSameSeed.dll",
+      "cwd": "${workspaceFolder}/RandomSameSeed",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    }
+  ]
+}
