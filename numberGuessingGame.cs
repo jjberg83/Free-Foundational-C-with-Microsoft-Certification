@@ -1,7 +1,8 @@
 // Set up the game
 Random random = new Random();
 int maxNumber = 20;
-int secretNumber = random.Next(1,maxNumber + 1);
+// int secretNumber = random.Next(1,maxNumber + 1);
+int secretNumber = 10;
 int maxGuesses = 5;
 int guessCount = 0;
 bool hasWon = false;
@@ -30,10 +31,12 @@ while(guessCount < maxGuesses)
     else if(playersGuess > secretNumber)
     {
         Console.WriteLine($"The correct number is lower. You have {maxGuesses - guessCount} guesses left!");
+        if(Math.Abs(playersGuess - secretNumber) <= 2) Console.WriteLine("You are also very close, the secret number is maximum two numbers away from your current guess");
     }
     else if (playersGuess < secretNumber)
     {
         Console.WriteLine($"The correct number is higher. You have {maxGuesses - guessCount} guesses left!");
+        if(Math.Abs(playersGuess - secretNumber) <= 2) Console.WriteLine("You are also very close, the secret number is maximum two numbers away from your current guess");
     }
 }
 
