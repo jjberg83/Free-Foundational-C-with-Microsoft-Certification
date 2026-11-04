@@ -3,9 +3,14 @@ namespace Billing
     public static class Calculator
     {
         // Add the CalculateTax and CalculateTotal methods here
-        public static void testPrint()
+        public static double CalculateTax(double order, double taxRate = 0.25)
         {
-            Console.WriteLine("Jeg er fra Billing");
+            return order * taxRate;   
+        }
+
+        public static double CalculateTotal(double order, double tax)
+        {
+            return order + tax;   
         }
     }
 }
