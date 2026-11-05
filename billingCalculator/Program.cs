@@ -1,17 +1,19 @@
 ﻿// Bring in the Billing namespace
-using Billing;
+// Her vises det hvordan man kan lage aliaser for kun en klasse
+// men ser ikke helt vitsen akkurat her.
+using Calc = Billing.Calculator;
 
 // Set up the order
 double order = 100.00;
 
 // Calculate tax and total
-double tax = Calculator.CalculateTax(order);
-double total = Calculator.CalculateTotal(order, tax);
+double tax = Calc.CalculateTax(order);
+double total = Calc.CalculateTotal(order, tax);
 
 // Lage en dansk ordre, med høyere skatt
 double orderDanish = 100.00;
-double taxDanish = Calculator.CalculateTax(orderDanish, taxRate:0.38);
-double totalDanish = Calculator.CalculateTotal(orderDanish, taxDanish);
+double taxDanish = Calc.CalculateTax(orderDanish, taxRate:0.38);
+double totalDanish = Calc.CalculateTotal(orderDanish, taxDanish);
 
 // Print the Norwegian receipt
 Console.WriteLine($"{new string('-', 22)}\nReceipt \n{new string('-', 22)}");
